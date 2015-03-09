@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<tool id="unafold_1" name="unafold" version="0.0.1">
+  <description>Folding of RNA sequences using UNAFold</description>
+  <command interpreter="bash">
+unafold.sh -i $inputFastaFile -o $outputArhive  -t '$outputArhive.extra_files_path' -a ${ na_type.nucacid } -c $tmp
+#if str($na_type.nucacid) == 'dna':
+   -s ${ na_type.sodium } -m ${ na_type.magnesium }
+#end if
+ > $outputLog
+  </command>
+
+  <inputs>
+    <param format="fasta" name="inputFastaFile" type="data" label="Fasta input file"/>
+
+    <conditional name="na_type">
+	<param name="nucacid" type="select" label="Nucleic Acid Type">
+        	<option value="rna" selected="true">RNA</option>
+        	<option value="dna">DNA</option>
+	</param>
+	<when value="dna">
+		<param name="sodium" type="float" size="6" value="1.0" min="0" max="100" label="[Na+] in M"/>
+    		<param name="magnesium" type="float" size="6" value="0.0" min="0" max="100" label="[Mg++] in M"/>
+	</when>
+	<when value="rna">
+		<!-- do nothing here -->
+       </when>
+   </conditional>
+
+    <param name="tmp" type="integer" size="3" value="37" min="0" max="100" label="Temperature (C)"/>
+
+  </inputs>
+
+  <outputs>
+     <data format="zip" name="outputArhive" label="Arhive: UNAFold on $on_string"/>
+     <data format="txt" name="outputLog" label="Log: UNAFold on $on_string"/>
+  </outputs>
+
+<help>
+
+This tool computes the fold of RNA/DNA using UNAFold v.3.8.
+
+UNAFold (http://mfold.rna.albany.edu/?q=unafold-man-pages) is a comprehensive software package for nucleic acid folding and hybridization prediction. The name is derived from "Unified Nucleic Acid Folding". Folding of single-stranded RNA or DNA, or hybridization between two single-strands, is accomplished in a variety of ways. Partition functions can be computed to derive base pair probabilities and stochastic samples of foldings or hybridizations. Energy minimization methods compute minimum free energy foldings or hybridizations, and can also compute suboptimal foldings that mimic the performance of the famous mfold software.
+
+For melting simulations, the package computes not just melting temperatures, but entire melting profiles. UV absorbance at 260 nm, heat capacity change (Cp), and mole fractions of different molecular species are computed as a function of temperature. ITC (Isothermal Titration Calorimetry) and van't Hoff plots are also simulated.
+
+UNAFold v.3.8 (http://mfold.rna.albany.edu/?q=unafold-man-pages)
+
+Galaxy wrapper for UNAFold v. 0.0.1 (author: Sergei Ryazansky, s.ryazansky@gmail.com)
+
+
+</help>
+</tool>
+
