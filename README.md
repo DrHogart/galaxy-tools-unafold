@@ -18,3 +18,5 @@ This is the [Galaxy](http://usegalaxy.org) wrapper for the [UNAFold](http://mfol
 ```html
     <datatype extension="zip" type="galaxy.datatypes.binary:Binary" mimetype="application/zip" subclass="True" />
 ```
+
+* Reload the Galaxy instance.
