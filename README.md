@@ -1,6 +1,6 @@
 # Galaxy Tool wrapper for UNAFold #
 
-This is the [Galaxy](http://usegalaxy.org) wrapper for the [UNAFold](http://mfold.rna.albany.edu/?q=DINAMelt/software). UNAFold software was developed for nucleic acid folding and hybridization prediction ([doi: 10.1007/978-1-60327-429-6_1](http://dx.doi.org/10.1007/978-1-60327-429-6_1), [doi: 10.1093/nar/gki591](http://dx.doi.org/10.1093/nar/gki591)). This wrapper is not yet deposited in the Tool-Shed repository, so this is the single place where it can downloaded.
+This is the [Galaxy](http://usegalaxy.org) wrapper for the [UNAFold](http://mfold.rna.albany.edu/?q=DINAMelt/software). UNAFold software was developed for nucleic acid folding and hybridization prediction ([doi: 10.1007/978-1-60327-429-6_1](http://dx.doi.org/10.1007/978-1-60327-429-6_1), [doi: 10.1093/nar/gki591](http://dx.doi.org/10.1093/nar/gki591)).
 
 ## Installation ##
 
