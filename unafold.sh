@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-#arguments are  -i input sequence file in fasta 
-#               -o output zip arhive  
+#arguments are: -i input sequence file in fasta
+#               -o output zip arhive
 #               -t temp directory with results
 #		-a DNA|RNA
 #		-c tempreature (C)
@@ -10,6 +10,7 @@ set -e
 #		-m [Mg++] in M
 #		-b maxbp
 
+# The original parametres of UNAFold:
 #-n, --NA=(RNA | DNA) (defaults to RNA)
 #-t, --temp=<temperature> (defaults to 37)
 #-N, --sodium=<[Na+] in M> (defaults to 1)
