@@ -4,7 +4,7 @@ This is the [Galaxy](http://usegalaxy.org) wrapper for the [UNAFold](http://mfol
 
 ## Installation ##
 
-* Save [UNAFold.pl](http://mfold.rna.albany.edu/?q=DINAMelt/software) in your $PATH, that is accesable to the Galaxy.
+* Save [UNAFold.pl](http://homepages.rpi.edu/~zukerm/download/UNAFold_download.html) in your $PATH, that is accesable to the Galaxy.
 
 * Create the directory `unafold` in `$GALAXY_DIR/tools/` and copy `unafold.xml` and `unafold.sh` files into it.
 * Add the Galaxy tool definition to the `tools_conf.xml`:
